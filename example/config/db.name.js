@@ -5,6 +5,6 @@ module.exports = {
   username: 'username',
   password: 'password',
   opts: { server: { auto_reconnect: true }, auth: {authdb: 'admin'}},
-  collectionPath: 'example/collections'
+  collectionPath: 'collections'
 };
 

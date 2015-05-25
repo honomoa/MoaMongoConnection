@@ -1,6 +1,8 @@
 'use strict';
 
 var    fs = require('fs'),
+     path = require('path'),
+   appDir = path.dirname(require.main.filename),
    colors = require('colors'),
  mongoose = require('mongoose'),
    MoaLog = require('MoaLog');
@@ -42,7 +44,7 @@ var MoaMongoConnection = (function(){
     var _this = this;
     
     fs
-    .readdirSync(__dirname+'/./'+_this.collectionPath)
+    .readdirSync(appDir+'/'+_this.collectionPath)
     .filter(function(file) {
       // filter out filename with `index' or `connection' prefix or not end with `.js' postfix
       var notSelfFolder = (file.indexOf('.') !== 0);
@@ -55,7 +57,7 @@ var MoaMongoConnection = (function(){
     .forEach(function(file) {
     //  console.log(file)
       var filename = file.split('.')[0];
-      _this.db[filename] = _this.connection.model(filename, require('./'+_this.collectionPath+file), filename);
+      _this.db[filename] = _this.connection.model(filename, require(appDir+'/'+_this.collectionPath+file), filename);
     });
   };
 
