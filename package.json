@@ -1,0 +1,22 @@
+{
+  "name": "MoaMongoConnection",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Moa Chung"
+  },
+  "homepage": "https://github.com/honomoa/MoaMongoConnection/",
+  "keywords": [
+    "moa",
+    "mongodb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/honomoa/MoaMongoConnection.git"
+  },
+  "dependencies": {
+    "colors": "~1.1.0",
+    "mongoose": "4.x",
+    "MoaLog": "honomoa/MoaLog"
+  }
+}
