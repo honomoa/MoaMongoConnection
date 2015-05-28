@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "colors": "~1.1.0",
-    "mongoose": "3.8.x",
-    "MoaLog": "honomoa/MoaLog#0.3.0"
+    "mongoose": "4.x",
+    "MoaLog": "honomoa/MoaLog"
   }
 }
